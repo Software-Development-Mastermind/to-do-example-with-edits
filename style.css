@@ -1,4 +1,5 @@
 body {
+  padding: 15px;
   background-color: grey;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: darkgreen;
@@ -6,10 +7,26 @@ body {
   text-align: center;
 }
 
-.flex-container {
-  display: flex;
+
+.container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: cornflowerblue;
+  background-color: grey;
+  font-size: large;
+  box-sizing: border-box;
+  display: flex;
 }
+
+.box {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgreen;
+  width: 250px; 
+}
+
+ul{
+  list-style-type: none;
+}
+
