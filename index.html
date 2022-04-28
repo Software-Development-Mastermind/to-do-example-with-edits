@@ -7,10 +7,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>To Do List</title>
       <link rel="stylesheet" href="style.css" />
-      <script src="scripts.js"></script>
+      
 </head>
 
-<body>
+<body id="body">
 
     <header>
       <h1>Get it together!</h1> 
@@ -20,36 +20,27 @@
     
     <h2>To Do items</h2>
 
-    <form >
+     <form id="form1" class="container">
 
-        <div>
+        <div id="div1">
+
           <label for="entry"></label>
           <input type="text" id="entry" placeholder="enter to do">
       
           <label for="Add"></label>
           <input type="button" id="Add" value="Add">
-         
-          <!--
-          <label for="items"></label>
-          <input type="checkbox" id="items">
-          -->
-
+        
           <br><br>
 
-        <nav class="container" >
-          
-          <ul  class="box" id="list">
-          
-          </ul>            
-        </nav> 
-
+          <ul  class="box" id="list"></ul>
+                          
         </div>
 
-    </form>
+     </form>
    
     </main>
     
     <footer></footer>
-
+    <script src="scripts.js"></script>
   </body>
 </html>
