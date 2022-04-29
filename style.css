@@ -31,5 +31,8 @@ ul{
   list-style-type: none;
 }
 
+.strikethrough:checked{
+  text-decoration: line-through;
+}
 
 
