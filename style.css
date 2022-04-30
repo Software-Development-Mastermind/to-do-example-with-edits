@@ -31,8 +31,16 @@ ul{
   list-style-type: none;
 }
 
-.strikethrough:checked{
+.myLine{
   text-decoration: line-through;
+}
+
+.button2 {
+  background-color: #4CAF50;
+  font-size: 16px;
+  padding: 16px;
+  border-radius: 50%;
+  color:black;  
 }
 
 
