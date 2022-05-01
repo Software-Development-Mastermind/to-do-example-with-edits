@@ -41,17 +41,25 @@ function handleKeyPress(e) {
         button.style.cssFloat = "right";
 
         button.addEventListener("click", () => 
-        handleRemove(text));
+        handleRemove(node));
 
 
   document.getElementById("list").appendChild(node); 
 }
 
-
  function addLineThrough(element) {
         element.classList.toggle("myLine");
  }
 
- function handleRemove(item) {
-        item.classList.removeChild("entry");
+ function handleRemove() {
+       //item.parentNode.removeChild(item);
+       //item.textContent = '';
+       //item.removeChild(item.childNodes[i]);
+      //item = this.parentNode;
+      //let ul = item.parentNode;
+      //ul.removeChild(item);
+      const item = document.querySelectorAll("Li");
+        for(var i=0; Li=item[i]; i++) {
+            Li.parentNode.removeChild(Li);
+        }
  }
