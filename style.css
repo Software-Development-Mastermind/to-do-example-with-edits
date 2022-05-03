@@ -3,7 +3,7 @@ body {
   background-color: grey;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: darkgreen;
-  font-size: 30px;
+  font-size: 35px;
   text-align: center;
 }
 
@@ -22,8 +22,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: lightgreen;
-  width: 250px; 
+  font-size: x-large;
+  background-color:rgb(59, 147, 59);
+  width: 350px; 
+  color:black;
 }
 
 
@@ -33,14 +35,17 @@ ul{
 
 .myLine{
   text-decoration: line-through;
+  text-decoration-color: blue;
 }
 
-.button2 {
-  background-color: #4CAF50;
-  font-size: 16px;
-  padding: 16px;
-  border-radius: 50%;
-  color:black;  
+.delete {
+  background-color: #0099ff;
+  font-size: 5px;
+  padding: 8px;
+  border-radius: 60%;
+  color:black;
+  float: right;
 }
+
 
 
