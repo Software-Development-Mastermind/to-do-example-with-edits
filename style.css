@@ -7,7 +7,6 @@ body {
   text-align: center;
 }
 
-
 .container {
   flex-direction: column;
   justify-content: center;
@@ -28,7 +27,6 @@ body {
   color:black;
 }
 
-
 ul{
   list-style-type: none;
 }
@@ -40,11 +38,16 @@ ul{
 
 .delete {
   background-color: #0099ff;
-  font-size: 5px;
-  padding: 8px;
+  font-size: 3px;
+  padding: 3px;
   border-radius: 60%;
   color:black;
   float: right;
+  font-size:small; 
+}
+
+.value{
+  font-size:x-large;
 }
 
 

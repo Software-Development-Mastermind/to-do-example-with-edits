@@ -1,4 +1,3 @@
-
 function init() {
     const addButton = document.getElementById("Add");
         addButton.onclick = handleAdd;
@@ -6,7 +5,6 @@ function init() {
     const addItem = document.getElementById("entry");
         addItem.onkeydown = handleKeyPress;
 }
-
 
 function handleKeyPress(e) {
     const addButton = document.getElementById("Add");
@@ -16,8 +14,7 @@ function handleKeyPress(e) {
   }
 }
 
-
- function handleAdd(){
+function handleAdd(){
 
     const node = document.createElement("Li");
 
@@ -34,22 +31,23 @@ function handleKeyPress(e) {
 
     const button = document.createElement("input");
         button.setAttribute("type","button");
+        button.setAttribute("value", "X");
         node.appendChild(button)
         button.classList.add("delete");
 
         button.addEventListener("click", () => 
         handleRemove(node));
 
-  document.getElementById("list").appendChild(node); 
+    document.getElementById("list").appendChild(node); 
 }
 
- function addLineThrough(element) {
+function addLineThrough(element) {
         element.classList.toggle("myLine");
  }
 
- function handleRemove(node) {
-      const item = document.getElementById("list");
+function handleRemove(node) {
+    const item = document.getElementById("list");
         item.removeChild(node);
  }
 
- window.onload = init;
+window.onload = init;
