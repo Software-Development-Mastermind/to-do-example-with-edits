@@ -1,53 +1,57 @@
-function init() {
-    const addButton = document.getElementById("Add");
-        addButton.onclick = handleAdd;
-  
-    const addItem = document.getElementById("entry");
-        addItem.onkeydown = handleKeyPress;
-}
+const addButton = document.getElementById("add-btn");
+addButton.addEventListener("click", (e) => {
+    console.log("dsfdsf");
+    e.preventDefault();
+    const todoInput = document.getElementById("todo-input");
+    createToDo(todoInput.value);
+    todoInput.value = "";
+    todoInput.focus();
+});
 
-function handleKeyPress(e) {
-    const addButton = document.getElementById("Add");
-        if (e.keyCode === 13) {
-        addButton.click();
-        return false;
-  }
-}
+function createToDo(todoText) {
+    const liElement = document.createElement("li");
 
-function handleAdd(){
-
-    const node = document.createElement("Li");
-
-    const text = document.getElementById("entry").value;
-        node.textContent = text;  
+    const spanElement = document.createElement("span");
+    spanElement.textContent = todoText;
+    liElement.appendChild(spanElement);
 
     const checkBox = document.createElement("input");
-        checkBox.setAttribute("type", "checkbox"); 
-        node.appendChild(checkBox)
-        checkBox.style.cssFloat = "left";
+    checkBox.setAttribute("type", "checkbox");
+    checkBox.style.cssFloat = "left";
 
-        checkBox.addEventListener("click", () => 
-            addLineThrough(node));
+    checkBox.addEventListener("click", (e) => {
+        addLineThrough(spanElement);
 
-    const button = document.createElement("input");
-        button.setAttribute("type","button");
-        button.setAttribute("value", "X");
-        node.appendChild(button)
-        button.classList.add("delete");
+        if (e.target.checked) {
+            deleteButton.classList.remove("hidden");
+        } else {
+            deleteButton.classList.add("hidden");
+        }
+    });
 
-        button.addEventListener("click", () => 
-        handleRemove(node));
+    liElement.appendChild(checkBox);
 
-    document.getElementById("list").appendChild(node); 
+    const deleteButton = document.createElement("input");
+    deleteButton.setAttribute("type", "button");
+    deleteButton.setAttribute("value", "X");
+    deleteButton.classList.add("delete");
+    deleteButton.classList.add("hidden");
+
+    deleteButton.addEventListener("click", (e) => {
+        unorderedListElement.removeChild(liElement);
+    });
+
+    liElement.appendChild(deleteButton);
+
+    const unorderedListElement = document.getElementById("list");
+    unorderedListElement.appendChild(liElement);
 }
 
 function addLineThrough(element) {
-        element.classList.toggle("myLine");
- }
+    element.classList.toggle("myLine");
+}
 
 function handleRemove(node) {
     const item = document.getElementById("list");
-        item.removeChild(node);
- }
-
-window.onload = init;
+    item.removeChild(node);
+}

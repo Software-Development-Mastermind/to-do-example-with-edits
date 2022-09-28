@@ -2,44 +2,49 @@
 <html lang="en">
 
 <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>To Do List</title>
-      <link rel="stylesheet" href="style.css" />      
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body id="body">
 
-    <header>
-      <h1>Get it together!</h1> 
-    </header>
+  <header>
+    <h1>Get it together!</h1>
+  </header>
 
-    <main>
-    
+  <main>
+
     <h2>To Do items</h2>
 
-     <form id="form1" class="container">
+    <div id="form1" class="container">
 
-        <div id="div1">
+
+      <div id="div1">
+        <form>
 
           <label for="entry"></label>
-          <input type="text" id="entry" placeholder="enter to do">
-      
+          <input id="todo-input" type="text" placeholder="enter to do">
+
           <label for="Add"></label>
-          <input type="button" id="Add" value="Add">
-        
-          <br><br>
+          <input id="add-btn" type="submit" value="Add">
 
-          <ul  class="box" id="list"></ul>
-                          
-        </div>
+        </form>
 
-     </form>
-   
-    </main>
-    
-    <footer></footer>
-    <script src="scripts.js"></script>
-  </body>
+        <br><br>
+
+        <ul class="box" id="list"></ul>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer></footer>
+  <script src="scripts.js"></script>
+</body>
+
 </html>

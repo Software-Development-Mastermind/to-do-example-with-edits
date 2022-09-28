@@ -7,6 +7,10 @@ body {
   text-align: center;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .container {
   flex-direction: column;
   justify-content: center;
@@ -22,16 +26,16 @@ body {
   justify-content: center;
   align-items: center;
   font-size: x-large;
-  background-color:rgb(59, 147, 59);
-  width: 350px; 
-  color:black;
+  background-color: rgb(59, 147, 59);
+  width: 350px;
+  color: black;
 }
 
-ul{
+ul {
   list-style-type: none;
 }
 
-.myLine{
+.myLine {
   text-decoration: line-through;
   text-decoration-color: blue;
 }
@@ -41,14 +45,11 @@ ul{
   font-size: 3px;
   padding: 3px;
   border-radius: 60%;
-  color:black;
+  color: black;
   float: right;
-  font-size:small; 
+  font-size: small;
 }
 
-.value{
-  font-size:x-large;
+.value {
+  font-size: x-large;
 }
-
-
-
