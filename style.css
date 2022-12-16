@@ -50,6 +50,16 @@ ul {
   font-size: small;
 }
 
+.edit {
+  background-color: #0099ff;
+  font-size: 3px;
+  padding: 3px;
+  border-radius: 60%;
+  color: black;
+  float: right;
+  font-size: small;
+}
+
 .value {
   font-size: x-large;
 }

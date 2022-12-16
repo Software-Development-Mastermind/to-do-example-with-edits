@@ -43,6 +43,20 @@ function createToDo(todoText) {
 
     liElement.appendChild(deleteButton);
 
+    const editButton = document.createElement("input");
+    editButton.setAttribute("type", "button");
+    editButton.setAttribute("value", "EDIT");
+    editButton.classList.add("edit");
+
+    editButton.addEventListener("click", (e) => {
+        // pop up modal to ask for input
+        const newText = prompt("What is the new text of the todo item?");
+        // change todo item text
+        spanElement.textContent = newText;
+    });
+
+    liElement.appendChild(editButton);
+
     const unorderedListElement = document.getElementById("list");
     unorderedListElement.appendChild(liElement);
 }
